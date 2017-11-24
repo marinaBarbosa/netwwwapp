@@ -9,7 +9,7 @@ namespace NET_WWW_HR
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}-.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,12 +20,15 @@ namespace NET_WWW_HR
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/clean-blog.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap.bundle.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/blog").Include(
+                    "~/Scripts/clean-blog.min.js"));
+        
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-grid.min.css",
+                      "~/fonts/font-awesome/css/font-awesome.min.css",
                       "~/Content/clean-blog.min.css"));
         }
     }
